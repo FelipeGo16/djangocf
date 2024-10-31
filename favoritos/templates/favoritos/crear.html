@@ -1,0 +1,25 @@
+{% extends 'base_bs5.html' %}
+
+{% block main %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+        <h3> {{ titulo }} </h3>
+        <p><a href="/index/{{ index }}">Atras</a></p>    
+        <form method="post">
+            {% csrf_token %}
+    
+            <table class="table">
+            {{ form.as_table }}
+            </table>
+            <input type="submit" class="btn btn-outline-primary">        
+        </form>
+    </div>
+  </div>
+</div>    
+
+{% endblock main %} 
+
+
+
+
